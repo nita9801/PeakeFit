@@ -1,3 +1,45 @@
+/* Default theme variables (Light Mode) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #4CAF50;
+}
+
+/* Dark Mode theme variables */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --link-color: #90caf9;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+nav a {
+  color: var(--link-color);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+button {
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: var(--link-color);
+  color: var(--bg-color);
+  border: none;
+  cursor: pointer;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -20,7 +62,7 @@ body {
   /* Added the rest of the header text */
   h1::after {
     font-family: Impact;
-    content: 'Pseudo Elements';
+    content: 'PeakeFit';
     color: #8ac4ff;
     margin-left: 5px;
   }
@@ -62,10 +104,13 @@ body {
     color: #b9C6ae;
     font-weight: bold;
     text-decoration: none;
+    color: var(--link-color);
+    margin: 0 10px;
   }
   
   nav a:hover {
     color: #fff;
+    text-decoration: underline;
   }
   
   main {
@@ -155,4 +200,3 @@ body {
       text-align: center;
     }
   }
-  
