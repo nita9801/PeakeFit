@@ -40,6 +40,35 @@ button {
   cursor: pointer;
 }
 
+.hover-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer; /* Default cursor for clickable elements */
+  transition: background-color 0.3s ease;
+}
+
+.hover-btn:hover {
+  background-color: #4CAF50; /* Change background on hover */
+  color: white;
+}
+
+.hover-box {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.hover-box:hover {
+  background-color: lightcoral; /* Change color on hover */
+}
+
+/* Custom cursor styles */
+body.custom-cursor {
+  cursor: url('https://cdn.jsdelivr.net/gh/konvajs/konva@v2.9.0/examples/images/cursor.svg'), auto;
+}
+
 body {
     display: flex;
     flex-direction: column;
