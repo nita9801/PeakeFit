@@ -86,13 +86,6 @@ body {
   }
   
   /* Added symbols before and after the nav links */
-  nav li::before,
-  nav li::after {
-    content: '\2766';
-    color: #8ac4ff;
-    padding: 1%;
-    font-family: cursive;
-  }
   
   nav ul {
     display: flex;
@@ -164,27 +157,6 @@ body {
     color: #fff;
   }
   
-  #css-tooltip {
-    position: relative;
-    text-decoration: underline;
-    color: #000;
-    cursor: pointer;
-  }
-  
-  /* Use a combination of pseudo-class and pseudo-element to create a tooltip */
-  #css-tooltip:hover::after {
-    content: "A message which appears when a cursor is positioned over an icon, image, hyperlink, or other element in a graphical user interface";
-    position: absolute;
-    left: 0px;
-    bottom: 24px;
-    min-width: 200px;
-    border: 1px #aaaaaa solid;
-    background-color: #772014;
-    padding: 12px;
-    color: #fff;
-    font-size: 80%;
-    z-index: 1;
-  }
   
   @media screen and (max-width: 768px) {
     header, main {
