@@ -1,4 +1,5 @@
-const themeToggle = document.getElementById('theme-toggle');
+const themeToggle = document.getElementById('btn-check');
+const toggleLabel = document.getElementById('toggle-label');
 
 //////////////////////////////////////////////////////////////////////////////
 //arrays of body parts
@@ -37,7 +38,7 @@ const legBodyParts = [
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
-    themeToggle.textContent = savedTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    toggleLabel.textContent = savedTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
 }
 
 // Toggle theme and update local storage
@@ -46,7 +47,7 @@ themeToggle.addEventListener('click', () => {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-    themeToggle.textContent = newTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    toggleLabel.textContent = newTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
 });
 
 //confirms selection of intensity and target area from dropdown menu and saves selection to local storage
