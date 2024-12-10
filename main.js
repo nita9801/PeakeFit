@@ -1,6 +1,39 @@
 const themeToggle = document.getElementById('btn-check');
 const toggleLabel = document.getElementById('toggle-label');
 
+//////////////////////////////////////////////////////////////////////////////
+//arrays of body parts
+//////////////////////////////////////////////////////////////////////////////
+const legBodyParts = [
+    "Hip",
+    "Thigh",
+    "Knee",
+    "Calf"
+  ];
+
+  const armBodyParts = [
+    "Shoulder",
+    "Upper arm",
+    "Forearm",
+    "Wrist",
+    "Bicep",
+    "Tricep"
+  ];
+
+  const coreBodyParts = [
+    "Abdomen",
+    "Pelvis",
+    "Lower back",
+    "Obliques"
+  ];
+
+  const exerciseMode = [
+    "Easy",
+    "Medium",
+    "Hard"
+  ]
+  //////////////////////////////////////////////////////////////////////////////
+
 // Check the user's saved theme preference (if any)
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
@@ -20,35 +53,35 @@ themeToggle.addEventListener('click', () => {
 //confirms selection of intensity and target area from dropdown menu and saves selection to local storage
 document.addEventListener('DOMContentLoaded', function() {
     const dropdownItems = document.querySelectorAll('.dropdown-item-intensity');
-        dropdownItems.forEach(item => {
-          item.addEventListener('click', function(event) {
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(event) {
             event.preventDefault();
             alert(`You selected: ${this.textContent}`);
-          });
         });
+    });
     dropdownItems.forEach(item => {
         item.addEventListener('click', function(event) {
             event.preventDefault();
             localStorage.setItem('intensity', this.textContent);
         });
     });
-    });   
+});   
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const dropdownItems = document.querySelectorAll('.dropdown-item-target');
-            dropdownItems.forEach(item => {
-              item.addEventListener('click', function(event) {
-                event.preventDefault();
-                alert(`You selected: ${this.textContent}`);
-              });
-            });
-        dropdownItems.forEach(item => {
-            item.addEventListener('click', function(event) {
-                event.preventDefault();
-                localStorage.setItem('target', this.textContent);
-            });
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownItems = document.querySelectorAll('.dropdown-item-target');
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            alert(`You selected: ${this.textContent}`);
         });
-        });   
-    
+    });
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            localStorage.setItem('target', this.textContent);
+        });
+    });
+});   
+
 
 
