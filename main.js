@@ -1,5 +1,38 @@
 const themeToggle = document.getElementById('theme-toggle');
 
+//////////////////////////////////////////////////////////////////////////////
+//arrays of body parts
+//////////////////////////////////////////////////////////////////////////////
+const legBodyParts = [
+    "Hip",
+    "Thigh",
+    "Knee",
+    "Calf"
+  ];
+
+  const armBodyParts = [
+    "Shoulder",
+    "Upper arm",
+    "Forearm",
+    "Wrist",
+    "Bicep",
+    "Tricep"
+  ];
+
+  const coreBodyParts = [
+    "Abdomen",
+    "Pelvis",
+    "Lower back",
+    "Obliques"
+  ];
+
+  const exerciseMode = [
+    "Easy",
+    "Medium",
+    "Hard"
+  ]
+  //////////////////////////////////////////////////////////////////////////////
+
 // Check the user's saved theme preference (if any)
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
@@ -23,31 +56,30 @@ document.addEventListener('DOMContentLoaded', function() {
           item.addEventListener('click', function(event) {
             event.preventDefault();
             alert(`You selected: ${this.textContent}`);
-          });
         });
+    });
     dropdownItems.forEach(item => {
         item.addEventListener('click', function(event) {
             event.preventDefault();
             localStorage.setItem('intensity', this.textContent);
         });
     });
-    });   
+});   
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const dropdownItems = document.querySelectorAll('.dropdown-item-target');
-            dropdownItems.forEach(item => {
-              item.addEventListener('click', function(event) {
-                event.preventDefault();
-                alert(`You selected: ${this.textContent}`);
-              });
-            });
-        dropdownItems.forEach(item => {
-            item.addEventListener('click', function(event) {
-                event.preventDefault();
-                localStorage.setItem('target', this.textContent);
-            });
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownItems = document.querySelectorAll('.dropdown-item-target');
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            alert(`You selected: ${this.textContent}`);
         });
-        });   
-    
+    });
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            localStorage.setItem('target', this.textContent);
+        });
+    });
+});   
 
 
