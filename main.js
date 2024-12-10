@@ -1,5 +1,38 @@
 const themeToggle = document.getElementById('theme-toggle');
 
+//////////////////////////////////////////////////////////////////////////////
+//arrays of body parts
+//////////////////////////////////////////////////////////////////////////////
+const legBodyParts = [
+    "Hip",
+    "Thigh",
+    "Knee",
+    "Calf"
+  ];
+
+  const armBodyParts = [
+    "Shoulder",
+    "Upper arm",
+    "Forearm",
+    "Wrist",
+    "Bicep",
+    "Tricep"
+  ];
+
+  const coreBodyParts = [
+    "Abdomen",
+    "Pelvis",
+    "Lower back",
+    "Obliques"
+  ];
+
+  const exerciseMode = [
+    "Easy",
+    "Medium",
+    "Hard"
+  ]
+  //////////////////////////////////////////////////////////////////////////////
+
 // Check the user's saved theme preference (if any)
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
@@ -48,6 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });   
-    
+
 
 
