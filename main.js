@@ -19,35 +19,35 @@ themeToggle.addEventListener('click', () => {
 //confirms selection of intensity and target area from dropdown menu and saves selection to local storage
 document.addEventListener('DOMContentLoaded', function() {
     const dropdownItems = document.querySelectorAll('.dropdown-item-intensity');
-        dropdownItems.forEach(item => {
-          item.addEventListener('click', function(event) {
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(event) {
             event.preventDefault();
             alert(`You selected: ${this.textContent}`);
-          });
         });
+    });
     dropdownItems.forEach(item => {
         item.addEventListener('click', function(event) {
             event.preventDefault();
             localStorage.setItem('intensity', this.textContent);
         });
     });
-    });   
+});   
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const dropdownItems = document.querySelectorAll('.dropdown-item-target');
-            dropdownItems.forEach(item => {
-              item.addEventListener('click', function(event) {
-                event.preventDefault();
-                alert(`You selected: ${this.textContent}`);
-              });
-            });
-        dropdownItems.forEach(item => {
-            item.addEventListener('click', function(event) {
-                event.preventDefault();
-                localStorage.setItem('target', this.textContent);
-            });
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownItems = document.querySelectorAll('.dropdown-item-target');
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            alert(`You selected: ${this.textContent}`);
         });
-        });   
+    });
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            localStorage.setItem('target', this.textContent);
+        });
+    });
+});   
     
 
 
