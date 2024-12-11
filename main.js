@@ -83,5 +83,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });   
 
-
+//redirects to results.html when 'submit' is clicked
+const button = document.getElementById('submit')
+// Check if intensity and target are selected before redirecting
+button.addEventListener("click", () => {
+    const intensity = localStorage.getItem('intensity');
+    const target = localStorage.getItem('target');
+    if (intensity && target) {
+        // Redirect to results.html
+        window.location.href = "results.html";
+    } else {
+        alert('Please select both intensity and target area before proceeding.');
+    }
+});
 
