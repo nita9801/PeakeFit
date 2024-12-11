@@ -78,4 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
+// adding the redirect for the results page to link to the home page
+document.getElementById('backButton').addEventListener('click', () => {
+    window.location.href = 'index.html'; // Redirect to the home page
+  });
