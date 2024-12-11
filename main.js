@@ -48,7 +48,4 @@ document.addEventListener('DOMContentLoaded', function() {
                 localStorage.setItem('target', this.textContent);
             });
         });
-        });   
-    
-
-
+    });
