@@ -1,144 +1,81 @@
-results.js
+// results.js
+//display exercise output result in a popup window on results.html page
+function displayResult(message) {
+    // Check if the popup already exists
+    if (!document.getElementById('resultPopup')) {
+        // Create the popup container
+        const popup = document.createElement('div');
+        popup.id = 'resultPopup';
+        popup.style.position = 'fixed';
+        popup.style.top = '20%';
+        popup.style.left = '50%';
+        popup.style.transform = 'translate(-50%, -20%)';
+        popup.style.width = '300px';
+        popup.style.backgroundColor = 'white';
+        popup.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+        popup.style.borderRadius = '10px';
+        popup.style.padding = '20px';
+        popup.style.zIndex = '1000';
+        popup.style.textAlign = 'center';
 
-//draft code
-//functions for different exercise outputs based on input selections
+        // Add the result message
+        const resultMessage = document.createElement('p');
+        resultMessage.id = 'resultMessage';
+        popup.appendChild(resultMessage);
 
-document.addEventListener('DOMContentLoaded', function() {
+        // Add the close button
+        const closeButton = document.createElement('button');
+        closeButton.textContent = 'Close';
+        closeButton.style.marginTop = '10px';
+        closeButton.onclick = () => {
+            document.body.removeChild(popup);
+        };
+        popup.appendChild(closeButton);
+
+        // Add the popup to the document body
+        document.body.appendChild(popup);
+    }
+
+    // Update the message in the popup
+    const resultMessage = document.getElementById('resultMessage');
+    resultMessage.textContent = message;
+    document.getElementById('resultPopup').style.display = 'block';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
     const intensity = localStorage.getItem('intensity');
     const target = localStorage.getItem('target');
-//input: easy and arms-- output alert: '10 pushups'
-    if (intensity === 'easy' && target === 'arms') {
-        alert('10 pushups');
-    }
 
-    document.querySelectorAll('.dropdown-item-intensity, .dropdown-item-target').forEach(item => {
-        item.addEventListener('click', function() {
-            const newIntensity = localStorage.getItem('intensity');
-            const newTarget = localStorage.getItem('target');
-
-            if (newIntensity === 'easy' && newTarget === 'arms') {
-                alert('10 pushups');
-            }
-        });
-    });
-//input: medium and arms-- output alert: '25 pushups'
-    if (intensity === 'medium' && target === 'arms') {
-        alert('25 pushups');
-    }
-
-    document.querySelectorAll('.dropdown-item-intensity, .dropdown-item-target').forEach(item => {
-        item.addEventListener('click', function() {
-            const newIntensity = localStorage.getItem('intensity');
-            const newTarget = localStorage.getItem('target');
-
-            if (newIntensity === 'medium' && newTarget === 'arms') {
-                alert('25 pushups');
-            }
-        });
-    });
-//input: hard and arms-- output alert: '50 pushups'
-if (intensity === 'hard' && target === 'arms') {
-    alert('50 pushups');
-}
-
-document.querySelectorAll('.dropdown-item-intensity, .dropdown-item-target').forEach(item => {
-    item.addEventListener('click', function() {
-        const newIntensity = localStorage.getItem('intensity');
-        const newTarget = localStorage.getItem('target');
-
-        if (newIntensity === 'hard' && newTarget === 'arms') {
-            alert('50 pushups');
+    function checkAndDisplayResult(intensity, target) {
+        if (intensity === 'easy' && target === 'arms') {
+            displayResult('10 pushups');
+        } else if (intensity === 'medium' && target === 'arms') {
+            displayResult('25 pushups');
+        } else if (intensity === 'hard' && target === 'arms') {
+            displayResult('50 pushups');
+        } else if (intensity === 'easy' && target === 'core') {
+            displayResult('10 situps');
+        } else if (intensity === 'medium' && target === 'core') {
+            displayResult('25 situps');
+        } else if (intensity === 'hard' && target === 'core') {
+            displayResult('50 situps');
+        } else if (intensity === 'easy' && target === 'legs') {
+            displayResult('10 squats');
+        } else if (intensity === 'medium' && target === 'legs') {
+            displayResult('25 squats');
+        } else if (intensity === 'hard' && target === 'legs') {
+            displayResult('50 squats');
         }
+    }
+
+    checkAndDisplayResult(intensity, target);
+
+    document.querySelectorAll('.dropdown-item-intensity, .dropdown-item-target').forEach(item => {
+        item.addEventListener('click', function () {
+            const newIntensity = localStorage.getItem('intensity');
+            const newTarget = localStorage.getItem('target');
+            checkAndDisplayResult(newIntensity, newTarget);
+        });
     });
 });
-//input: easy and core-- output alert: '10 situps'
-if (intensity === 'easy' && target === 'core') {
-alert('10 situps');
-}
 
-document.querySelectorAll('.dropdown-item-intensity, .dropdown-item-target').forEach(item => {
-item.addEventListener('click', function() {
-    const newIntensity = localStorage.getItem('intensity');
-    const newTarget = localStorage.getItem('target');
-
-    if (newIntensity === 'easy' && newTarget === 'core') {
-        alert('10 situps');
-    }
-});
-});
-//input: medium and core-- output alert: '25 situps'
-if (intensity === 'medium' && target === 'core') {
-alert('25 situps');
-}
-
-document.querySelectorAll('.dropdown-item-intensity, .dropdown-item-target').forEach(item => {
-item.addEventListener('click', function() {
-    const newIntensity = localStorage.getItem('intensity');
-    const newTarget = localStorage.getItem('target');
-
-    if (newIntensity === 'medium' && newTarget === 'core') {
-        alert('25 situps');
-    }
-});
-});
-//input: hard and core-- output alert: '50 situps'
-if (intensity === 'hard' && target === 'core') {
-alert('50 situps');
-}
-
-document.querySelectorAll('.dropdown-item-intensity, .dropdown-item-target').forEach(item => {
-item.addEventListener('click', function() {
-const newIntensity = localStorage.getItem('intensity');
-const newTarget = localStorage.getItem('target');
-
-if (newIntensity === 'hard' && newTarget === 'core') {
-    alert('50 situps');
-}
-});
-});
-//input: easy and legs-- output alert: '10 squats'
-if (intensity === 'easy' && target === 'legs') {
-alert('10 squats');
-}
-
-document.querySelectorAll('.dropdown-item-intensity, .dropdown-item-target').forEach(item => {
-item.addEventListener('click', function() {
-    const newIntensity = localStorage.getItem('intensity');
-    const newTarget = localStorage.getItem('target');
-
-    if (newIntensity === 'easy' && newTarget === 'legs') {
-        alert('10 squata');
-    }
-});
-});
-//input: medium and legs-- output alert: '25 squats'
-if (intensity === 'medium' && target === 'legs') {
-alert('25 squats');
-}
-
-document.querySelectorAll('.dropdown-item-intensity, .dropdown-item-target').forEach(item => {
-item.addEventListener('click', function() {
-    const newIntensity = localStorage.getItem('intensity');
-    const newTarget = localStorage.getItem('target');
-
-    if (newIntensity === 'medium' && newTarget === 'legs') {
-        alert('25 squats');
-    }
-});
-});
-//input: hard and legs-- output alert: '50 squats'
-if (intensity === 'hard' && target === 'legs') {
-alert('50 squats');
-}
-
-document.querySelectorAll('.dropdown-item-intensity, .dropdown-item-target').forEach(item => {
-item.addEventListener('click', function() {
-const newIntensity = localStorage.getItem('intensity');
-const newTarget = localStorage.getItem('target');
-
-if (newIntensity === 'hard' && newTarget === 'legs') {
-    alert('50 squats');
-}
-});
-});
-});
