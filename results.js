@@ -82,3 +82,9 @@ document.addEventListener('DOMContentLoaded', function () {
 document.getElementById('backButton').addEventListener('click', () => {
     window.location.href = 'index.html'; // Redirect to the home page
   });
+  // redirect from home page to AboutUs
+  
+  function goToAboutPage() {
+    window.location.href = 'aboutUs.html';
+  }
+
