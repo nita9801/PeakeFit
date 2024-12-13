@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>MY First Web Page</title>
+        <title>PeakeFit</title>
         <link rel="stylesheet" href="aboutUs.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
          <!--backButton-->
-    <button id="backButton">Go Back to Home</button>
+        <button id="backButton" onclick="javascript:window.location.href='Index.html'">Go Back to Home</button>
     </head>
-    <body>
-        <h1>Welcome to My Web Page</h1>
-        <p>PeakeFit aims to eliminate the uncertainty surrounding physical fitness choices. 
-        We are dedicated to providing our users with clear, straightforward guidance for workouts,
-        whether at home or in the gym. Simply select the intensity level you desire and the specific body area you wish to target, 
-        and our platform will instantly recommend the most effective exercises for you.</p>
-
-        <h2>Contact Me</h2>
-        <form>
-            <label for="Name">Name:</label><br>
-        <input type="text" id="name";
-    name="name"><br><br> 
-    
-           <label for="email">Email:</label><br>
-           <input type="email" id="email";
-    name="email"><br><br>
-
-    <input type="submit" value="Submit">
-        </form>
-    
-        <script src="results.js"></script>
+    <body style="background-color: #EFEFEF;">
+        <div class="container my-5" style="border: 2px solid black;padding:10px">
+            <h1>Welcome to</h1>
+            <div class="col-lg-8 px-0" style="width:100%;">
+                <p class="fs-5" style="text-align:center;width:100%;">
+                    PeakeFit aims to eliminate the uncertainty surrounding physical fitness choices. 
+                    We are dedicated to providing our users with clear, straightforward guidance for workouts,
+                    whether at home or in the gym. Simply select the intensity level you desire and the specific body area you wish to target, 
+                    and our platform will instantly recommend the most effective exercises for you.
+                </p>
+            </div>
+            <div style="text-align:center;">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="Name">Name:</label><br>
+                <input type="text" id="name"; name="name"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email"; name="email"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </body>
 </html>
