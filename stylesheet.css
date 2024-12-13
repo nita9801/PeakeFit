@@ -40,6 +40,10 @@ button {
   cursor: pointer;
 }
 
+.navbar-brand {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:xx-large ;
+}
 .hover-btn {
   padding: 10px 20px;
   font-size: 16px;
@@ -192,6 +196,15 @@ body {
   @media screen and (max-width: 768px) {
     header, main {
       flex-direction: column;
+    }
+
+    section {
+      padding-right: 0;
+    }
+    
+    aside {
+      width: 100%;
+      text-align: center;
     }
   }
   
