@@ -56,7 +56,10 @@ Provides navigation to a different page(aboutUs.html) indicating a multi-page
 setup for the the website.
 
 ## Contributing
- 
-
+ Christine L
+ Justin K
+ Megan W
+ Michael M 
+ Jermaine M 
 
 
