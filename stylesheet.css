@@ -180,11 +180,13 @@ body {
   
   footer {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     padding: 2%;
     background-color: #13293d;
     color: #fff;
   }
+
+ 
   
   
   @media screen and (max-width: 768px) {
