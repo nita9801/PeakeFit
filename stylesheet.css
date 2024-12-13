@@ -180,25 +180,18 @@ body {
   
   footer {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     padding: 2%;
     background-color: #13293d;
     color: #fff;
   }
+
+ 
   
   
   @media screen and (max-width: 768px) {
     header, main {
       flex-direction: column;
-    }
-  
-    section {
-      padding-right: 0;
-    }
-  
-    aside {
-      width: 100%;
-      text-align: center;
     }
   }
   
