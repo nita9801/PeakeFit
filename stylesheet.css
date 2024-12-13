@@ -197,15 +197,6 @@ body {
     header, main {
       flex-direction: column;
     }
-
-    section {
-      padding-right: 0;
-    }
-    
-    aside {
-      width: 100%;
-      text-align: center;
-    }
   }
   
   
