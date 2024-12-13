@@ -7,12 +7,12 @@ function displayResult(message) {
         const popup = document.createElement('div');
         popup.id = 'resultPopup';
         popup.style.position = 'fixed';
-        popup.style.top = '20%';
-        popup.style.left = '50%';
+        popup.style.top = '30%';
+        popup.style.left = '75%';
         popup.style.transform = 'translate(-50%, -20%)';
         popup.style.width = '300px';
         popup.style.backgroundColor = 'white';
-        popup.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+        popup.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 1.0)';
         popup.style.borderRadius = '10px';
         popup.style.padding = '20px';
         popup.style.zIndex = '1000';
