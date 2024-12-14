@@ -43,7 +43,9 @@ button {
 .navbar-brand {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size:xx-large ;
-}
+  align-items: center; 
+  max-height: 200px;
+ }
 .hover-btn {
   padding: 10px 20px;
   font-size: 16px;
@@ -85,9 +87,16 @@ body {
     align-items: center;
     padding: 1%;
     background-color: #13293d;
-    color: #fff;
+    color: #fff;  
   }
-  
+nav img{
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  display: flex;
+  box-sizing: border-box;
+} 
   h1 {
     font-size: 200%;
   }

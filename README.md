@@ -17,7 +17,7 @@ clone the repository:
 '''bash
 git clone https://github.com/nita9801/PeakeFit.git
 ## link/URl
-
+https://nita9801.github.io/PeakeFit/
 ## Usage
 Instructions on how to use the project.
 
