@@ -1,8 +1,8 @@
 /* Default theme variables (Light Mode) */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
+  --text-color: #cfffe7;
   --link-color: #4CAF50;
+  --header-color: #0093AF;
 }
 
 /* Dark Mode theme variables */
@@ -10,12 +10,19 @@
   --bg-color: #121212;
   --text-color: #ffffff;
   --link-color: #90caf9;
+  header {
+    background-color: #13293d;
+  }
+  footer{
+    background-color:#13293d ;
+  }
 }
+  
+/*Apply theme variables */
 
-/* Apply theme variables */
 body {
   
-  color: var(--text-color);
+  color:#cfffe7;
   font-family: Arial, sans-serif;
   margin: 0;
   padding:0;
@@ -39,8 +46,8 @@ nav a:hover {
 button {
   margin: 20px 0;
   padding: 10px 20px;
-  background-color: var(--link-color);
-  color: var(--bg-color);
+  background-color: #536878;
+  color: var(--link-color);
   border: none;
   cursor: pointer;
 }
@@ -74,6 +81,23 @@ button {
 .hover-box:hover {
   background-color: lightcoral; /* Change color on hover */
 }
+/* created a submit and about me buttonn to be able to change color*/
+.aboutUsbtn{
+background-color:#536878;
+color:#cfffe7 ;
+font-family:'Franklin Gothic Medium', 'Arial Narrow, Arial, sans-serif';
+margin: 20px 10px;
+padding: 10px 20px;
+font-size: 16px;
+border-radius: 5px;
+
+}
+.aboutUsbtn:hover {
+  background-color:#4CAF50;
+  color: #cfffe7;
+  transform: scale(1.05); /* Slight zoom-in effect */
+}
+
 
 /* Custom cursor styles */
 body.custom-cursor {
@@ -91,7 +115,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1%;
-    background-color: #13293d;
+    background-color: var(--header-color);
     color: #fff;  
   }
 nav img{
@@ -110,8 +134,8 @@ nav img{
   h1::after {
     font-family: Impact;
     content: 'PeakeFit';
-    color: #8ac4ff;
-    margin-left: 5px;
+    color: #0093AF;
+    margin-left: 10px;
   }
   
   h2 {
@@ -141,7 +165,7 @@ nav img{
   }
   
   nav a {
-    color: #b9C6ae;
+    color: #cfffe7;
     font-weight: bold;
     text-decoration: none;
     color: var(--link-color);
@@ -199,9 +223,10 @@ nav img{
   footer {
     display: flex;
     justify-content: right;
-    padding: 2%;
-    background-color: #13293d;
-    color: #fff;
+    padding: 1%;
+    background-color: var(--header-color);
+    color: #cfffe7;
+    align-content:right;
   }
 
  
