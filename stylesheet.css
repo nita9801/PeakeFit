@@ -51,6 +51,15 @@ button {
   border: none;
   cursor: pointer;
 }
+.btnDrkmode{
+  background-color: #536878;
+  color: #fff;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow, Arial, sans-serif';
+  margin: 20px 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
 
 .navbar-brand {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -97,8 +106,17 @@ border-radius: 5px;
   color: #cfffe7;
   transform: scale(1.05); /* Slight zoom-in effect */
 }
-
-
+/* update the the container color in intro content*/
+.intro{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow, Arial, sans-serif'; 
+    background-color:#536878;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 2%;
+    padding: 5%;
+    justify-content: center;
+    align-content: center;
+  }
 /* Custom cursor styles */
 body.custom-cursor {
   cursor: url('https://cdn.jsdelivr.net/gh/konvajs/konva@v2.9.0/examples/images/cursor.svg'), auto;
@@ -219,20 +237,19 @@ nav img{
     margin: 2% 0;
     padding: 1%;
   }
-  
+  /* updated the colors in footer to better emulate dark and light mode*/
   footer {
     display: flex;
     justify-content: right;
-    padding: 1%;
+    padding: 0%;
     background-color: var(--header-color);
     color: #cfffe7;
     align-content:right;
-  }
+    
+}
+/* changiing the color of the btn in lightmode*/
 
- 
-  
-  
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     header, main {
       flex-direction: column;
     }
