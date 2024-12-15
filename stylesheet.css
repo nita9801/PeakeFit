@@ -7,13 +7,14 @@
 /* Dark Mode theme variables */
 [data-theme="dark"] {
   --bg-color: #121212;
-  --text-color: #ffffff;
+  --color: #080808;
   --link-color: #90caf9;
+  
   header {
-    background-color: #13293d;
+    background-color: #005f6b;
   }
   footer{
-    background-color:#13293d ;
+    background-color:#005f6b;
   }
 }
   /*Apply theme variables */
