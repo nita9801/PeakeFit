@@ -60,7 +60,12 @@ button {
   font-size: 16px;
   border-radius: 5px;
   }
-
+.btnDrkmode:hover{
+  background-color:#4CAF50;
+  color: #fff;
+  transform: scale(1.05); 
+  /* Slight zoom-in effect */
+}
   .navbar-brand {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size:xx-large ;
