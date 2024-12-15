@@ -64,7 +64,7 @@ button {
   background-color:#4CAF50;
   color: #fff;
   transform: scale(1.05); 
-  /* Slight zoom-in effect */
+    /* Slight zoom-in effect */
 }
   .navbar-brand {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -94,6 +94,15 @@ button {
   background-color: lightcoral; /* Change color on hover */
   }
   /* created a submit and about me buttonn to be able to change color*/
+  .button{
+    background-color:#536878;
+    color:#fff;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow, Arial, sans-serif';
+    margin: 20px 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    }
   .aboutUsbtn{
   background-color:#536878;
   color:#fff;
@@ -103,6 +112,13 @@ button {
   font-size: 16px;
   border-radius: 5px;
   }
+  .button:hover {
+    background-color:#4CAF50;
+    color: #cfffe7;
+    transform: scale(1.05);
+    /* Slight zoom-in effect */
+  }
+  
   .aboutUsbtn:hover {
   background-color:#4CAF50;
   color: #cfffe7;
@@ -121,8 +137,9 @@ button {
   }
   /* Custom cursor styles */
   body.custom-cursor {
-  cursor: url('https://cdn.jsdelivr.net/gh/konvajs/konva@v2.9.0/examples/images/cursor.svg'), auto;
+    cursor: url('https://cdn.jsdelivr.net/gh/konvajs/konva@v2.9.0/examples/images/cursor.svg'), auto;
   }
+  
   body {
     display: flex;
     flex-direction: column;
