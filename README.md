@@ -1,3 +1,24 @@
+# screenshot
+<img src="images\Screenshot 2024-12-15 154124.png" alt=homepage>
+
+Welcome to **My Project**! This is a sample description.
+
+## Features
+- Feature 1
+- Feature 2
+
+![Feature Screenshot](readme-assets/screenshot.png)
+)
+
+Welcome to **My Project**! This is a sample description.
+
+## Features
+- Feature 1
+- Feature 2
+
+![Feature Screenshot](readme-assets/screenshot.png)
+
+
 # PeakeFit
 PeakeFit is a place for folks who have a hard time figuring out the best way to get in shape.
 ## Description
