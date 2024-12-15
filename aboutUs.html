@@ -20,15 +20,20 @@
             </div>
             <div style="text-align:center;">
             <h2>Contact Me</h2>
-            <form>
+            <form action="mailto:contactus@peakefit.com" enctype="text/plain">
                 <label for="Name">Name:</label><br>
-                <input type="text" id="name"; name="name">
-                <br><br>
-                <label for="email">Email:</label>
-                <br>
+                <input type="text" id="subject" name="subject"; name="name">
+                <br/><br/>
+
+                <label for="email">Email:</label><br>
                 <input type="email" id="email"; name="email">
-                <br><br>
-                <input type="submit" value="Submit">
+                <br/><br/>
+                
+                <label for="body">Message:</label><br>
+                <textarea name="body" rows="5" cols="30" placeholder="Your Message"></textarea><br>
+                <br/><br/>
+
+                <input type="submit" value="Send">
             </form>
         </div>
     </body>
