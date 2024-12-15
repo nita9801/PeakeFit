@@ -100,7 +100,8 @@ button {
   .aboutUsbtn:hover {
   background-color:#4CAF50;
   color: #cfffe7;
-  transform: scale(1.05); /* Slight zoom-in effect */
+  transform: scale(1.05); 
+  /* Slight zoom-in effect */
   }
   /* update the the container color in intro content*/
   .intro{
