@@ -15,14 +15,28 @@ header {
     padding: 1%;
     background-color: #13293d;
     color: #fff;
-  }
+    }
 
-#top {
+  #top {
     color: #4CAF50;
     text-align: center;
-}
-
-
+  }
+  /* adding style to back button on about us*/
+  .backButton{
+    background-color:#005f6b;
+    color: #fff;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow, Arial, sans-serif';
+    margin: 20px 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    }
+    .backButton:hover {
+      background-color:#4CAF50;
+      color: #fff;
+      transform: scale(1.05); 
+      /* Slight zoom-in effect */
+      }
 p {
     font-size: 18px;
     color: #333;
@@ -32,12 +46,20 @@ button {
     background-color: #008CBA;
     color: white;
     border: none;
+    border-radius: 5%;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
     max-width: 200px;
 }
-
+/* back button styling*/
+    button:hover {
+      background-color:#4CAF50;
+      color: #fff;
+      transform: scale(1.05); 
+      /* Slight zoom-in effect */
+      }
+    
 img{
     max-width: 500px;
     max-height: 500px;
@@ -55,29 +77,23 @@ footer {
     background-color: #13293d;
     color: #fff;
   }
-
-/* back button styling*/
-button:hover {
-    background-color: #005f6b;
-}
+  
 
 .btn {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #005f6b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-
-
-/* responsive layout- stacks images on top of one another*/  
-  @media screen and (max-width: 768px) {
-    header, main {
-      flex-direction: column;
-    }
-  }
+  /* responsive layout- stacks images on top of one another*/  
+      @media screen and (max-width: 768px) {
+        header, main {
+        flex-direction: column;
+        }
+}
   
   

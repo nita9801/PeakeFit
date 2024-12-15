@@ -1,4 +1,19 @@
-AboutUs.css
+.backButton{
+  background-color:#005f6b;
+  color:#fff;
+  font-family:'Franklin Gothic Medium','Arial';
+  margin: 20px 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  }
+  .backButton:hover {
+  background-color:#4CAF50;
+  color: #cfffe7;
+  transform: scale(1.05); 
+  /* Slight zoom-in effect */
+  }
+
 
 body {
     font-family: Arial, sans-serif;
@@ -15,7 +30,7 @@ h1 {
 h1::after {
     font-family: Impact;
     content: 'PeakeFit';
-    color: #8ac4ff;
+    color: #0093AF;
     margin-left: 5px;
 }
 

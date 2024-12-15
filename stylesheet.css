@@ -1,24 +1,34 @@
 /* Default theme variables (Light Mode) */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
+  --text-color: #cfffe7;
   --link-color: #4CAF50;
+  --header-color: #0093AF;
 }
-
 /* Dark Mode theme variables */
 [data-theme="dark"] {
   --bg-color: #121212;
-  --text-color: #ffffff;
+  --color: #080808;
   --link-color: #90caf9;
+  
+  header {
+    background-color: #005f6b;
+  }
+  footer{
+    background-color:#005f6b;
+  }
 }
+  /*Apply theme variables */
 
-/* Apply theme variables */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  color:#cfffe7;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding:0;
+  background-image:url('images/gym.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 nav a {
@@ -34,82 +44,124 @@ nav a:hover {
 button {
   margin: 20px 0;
   padding: 10px 20px;
-  background-color: var(--link-color);
-  color: var(--bg-color);
+  background-color: #536878;
+  color: var(--link-color);
   border: none;
   cursor: pointer;
-}
 
-.navbar-brand {
+}
+/* classes*/
+  .btnDrkmode{
+  background-color: #536878;
+  color: #fff;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow, Arial, sans-serif';
+  margin: 20px 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  }
+.btnDrkmode:hover{
+  background-color:#4CAF50;
+  color: #fff;
+  transform: scale(1.05); 
+  /* Slight zoom-in effect */
+}
+  .navbar-brand {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size:xx-large ;
-}
-.hover-btn {
+  align-items: center; 
+  max-height: 200px;
+ }
+  .hover-btn {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer; /* Default cursor for clickable elements */
   transition: background-color 0.3s ease;
-}
+  }
 
-.hover-btn:hover {
+  .hover-btn:hover {
   background-color: #4CAF50; /* Change background on hover */
   color: white;
-}
-
-.hover-box {
+  }
+  .hover-box {
   width: 200px;
   height: 200px;
   background-color: lightblue;
   margin-top: 20px;
   transition: background-color 0.3s ease;
-}
-
-.hover-box:hover {
+  }
+  .hover-box:hover {
   background-color: lightcoral; /* Change color on hover */
-}
-
-/* Custom cursor styles */
-body.custom-cursor {
+  }
+  /* created a submit and about me buttonn to be able to change color*/
+  .aboutUsbtn{
+  background-color:#536878;
+  color:#fff;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow, Arial, sans-serif';
+  margin: 20px 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  }
+  .aboutUsbtn:hover {
+  background-color:#4CAF50;
+  color: #cfffe7;
+  transform: scale(1.05); 
+  /* Slight zoom-in effect */
+  }
+  /* update the the container color in intro content*/
+  .intro{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow, Arial, sans-serif'; 
+    background-color:#536878;
+    font-size: 20px;
+    color: #fff;
+    padding: 5%;
+    justify-content: center;
+    align-content: center;
+  }
+  /* Custom cursor styles */
+  body.custom-cursor {
   cursor: url('https://cdn.jsdelivr.net/gh/konvajs/konva@v2.9.0/examples/images/cursor.svg'), auto;
-}
-
-body {
+  }
+  body {
     display: flex;
     flex-direction: column;
     line-height: 1.3;
   }
-  
   header {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1%;
-    background-color: #13293d;
-    color: #fff;
+    background-color: var(--header-color);
+    color: #fff;  
   }
-  
+  nav img{
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  display: flex;
+  box-sizing: border-box;
+  } 
   h1 {
     font-size: 200%;
   }
-  
   /* Added the rest of the header text */
   h1::after {
     font-family: Impact;
     content: 'PeakeFit';
-    color: #8ac4ff;
-    margin-left: 5px;
+    color: #0093AF;
+    margin-left: 10px;
   }
-  
   h2 {
     margin: 2% 0;
     font-size: 180%;
   }
-  
   h3 {
     margin: 2% 0;
     font-size: 150%;
   }
-  
   /* Added asterisk before every h3 heading */
   h3::before {
     font-family: Impact;
@@ -117,82 +169,68 @@ body {
     color: #772014;
     margin-right: 5px;
   }
-  
   /* Added symbols before and after the nav links */
-  
   nav ul {
     display: flex;
     justify-content: space-between;
     min-width: 300px;
   }
-  
   nav a {
-    color: #b9C6ae;
+    color: #cfffe7;
     font-weight: bold;
     text-decoration: none;
     color: var(--link-color);
     margin: 0 10px;
   }
-  
   nav a:hover {
     color: #fff;
     text-decoration: underline;
   }
-  
   main {
     display: flex;
     flex: 1 1 0;
     max-width: 1200px;
     margin: 2% auto;
   }
-  
   section {
     flex: 1 1 0;
     padding-right: 5%;
   }
-  
   article {
     border-bottom: 1px solid #d8a47f;
   }
-  
   article p {
     margin: 2% 0;
     font-size: 110%;
   }
-  
   article ul {
     margin-left: 5%;
     margin-bottom: 2%;
     font-size: 110%;
     list-style: circle;
   }
-  
   aside {
     width: 25%;
   }
-  
   aside h2 {
     font-size: 150%;
   }
-  
   input,
   button {
     width: 100%;
     margin: 2% 0;
     padding: 1%;
   }
-  
+  /* updated the colors in footer to better emulate dark and light mode*/
   footer {
     display: flex;
     justify-content: right;
-    padding: 2%;
-    background-color: #13293d;
-    color: #fff;
+    padding: 0%;
+    background-color: var(--header-color);
+    color: #cfffe7;
+    align-content:right;
   }
-
- 
-  
-  
+  /* changiing the color of the btn in lightmode*/
   @media screen and (max-width: 768px) {
     header, main {
       flex-direction: column;
