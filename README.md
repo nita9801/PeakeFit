@@ -8,7 +8,7 @@ Welcome to **My Project**! This is a sample description.
 - Feature 2
 
 ![Feature Screenshot](readme-assets/screenshot.png)
-)
+
 
 Welcome to **My Project**! This is a sample description.
 
